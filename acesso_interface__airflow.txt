@@ -1,0 +1,9 @@
+Vdfs4BCV9VR6uSHn
+
+airflow : localhost:8080
+
+usuario:admin  
+
+para gerar a senha executar no terminal dentro da pasta do projeto :  docker exec -it airflow cat  standalone_admin_password.txt
+
+guardar bem essa senha 
