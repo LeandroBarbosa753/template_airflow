@@ -7,3 +7,14 @@ usuario:admin
 para gerar a senha executar no terminal dentro da pasta do projeto :  docker exec -it airflow cat  standalone_admin_password.txt
 
 guardar bem essa senha 
+
+
+
+------------
+
+servidor datahub
+
+192.168.6.3
+
+datahub
+dinteti#55p
