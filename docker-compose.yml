@@ -23,7 +23,7 @@ services:
       sh -c "
       sleep 10 &&
       mc alias set myminio http://minio:9000 minioadmin minio@1234! &&
-      mc mb myminio/landing
+      mc mb myminio/bucket-de-dados-da-atividade
       "
 
   postgres-airflow:
@@ -59,8 +59,10 @@ services:
       - "8080:8080"
     volumes:
       - ./airflow/dags:/opt/airflow/dags
+      - ./requirements.txt:/requirements.txt
       - ./airflow/config_airflow:/opt/airflow/config_airflow
-    command: ['airflow', 'standalone']
+    command: >
+             bash -c "pip install -r /requirements.txt && airflow standalone"
 
   mariadb:
     image: mariadb:10
