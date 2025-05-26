@@ -21,7 +21,7 @@ services:
       - minio
     entrypoint: |
       sh -c "
-      sleep 10 &&
+      sleep 30 &&
       mc alias set myminio http://minio:9000 minioadmin minio@1234! &&
       mc mb myminio/bucket-de-dados-da-atividade
       "
