@@ -3,7 +3,7 @@ version: '3.8'
 services:
   minio:
     image: minio/minio
-    container_name: minio
+    container_name: minio_2
     environment:
       MINIO_ACCESS_KEY: minioadmin
       MINIO_SECRET_KEY: minio@1234!
@@ -16,7 +16,7 @@ services:
   
   minio_mc:
     image: minio/mc
-    container_name: minio_mc
+    container_name: minio_mc_2
     depends_on:
       - minio
     entrypoint: |
