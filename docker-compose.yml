@@ -62,8 +62,7 @@ services:
       - ./requirements.txt:/requirements.txt
       - ./airflow/config_airflow:/opt/airflow/config_airflow
     command: >
-             bash -c "pip install -r /requirements.txt && airflow standalone"
-
+             bash -c "rm -f /opt/airflow/airflow-webserver.pid && pip install -r /requirements.txt && airflow standalone"
   mariadb:
     image: mariadb:10
     container_name: local_mariadb
